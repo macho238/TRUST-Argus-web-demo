@@ -1,0 +1,9 @@
+This directory contains assets for the TRUST Argus web demo.
+
+Required files:
+- logo-white.png (TRUST Argus logo in white)
+- favicon.ico (Browser favicon)
+- samples/ (Directory for sample injury images)
+
+Note: Replace placeholder.txt with actual assets before deployment.
+

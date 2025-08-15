@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.R.U.S.T. Argus - AI-Powered Emergency Medical Assistant</title>
+    <meta name="description" content="Experience T.R.U.S.T. Argus: The world's first AI injury detection app with medical-grade accuracy. Used by first responders worldwide.">
+    <meta name="keywords" content="emergency response, first aid, injury detection, medical app, triage, EMS, AI medical, healthcare">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.trust-argus.com/">
+    <meta property="og:title" content="T.R.U.S.T. Argus - AI-Powered Emergency Medical Assistant">
+    <meta property="og:description" content="Revolutionary AI injury detection with medical-grade accuracy. Used by first responders worldwide.">
+    <meta property="og:image" content="https://www.trust-argus.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.trust-argus.com/">
+    <meta property="twitter:title" content="T.R.U.S.T. Argus - AI-Powered Emergency Medical Assistant">
+    <meta property="twitter:description" content="Revolutionary AI injury detection with medical-grade accuracy. Used by first responders worldwide.">
+    <meta property="twitter:image" content="https://www.trust-argus.com/og-image.jpg">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- TensorFlow.js - Using specific version for compatibility -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/TRUSTArgus-logo-wht-text.png" alt="T.R.U.S.T. Argus Logo" class="logo-img">
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#demo" class="nav-link">Live Demo</a>
+                <a href="#technology" class="nav-link">Technology</a>
+                <a href="#use-cases" class="nav-link">Use Cases</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Revolutionary <span class="ai-powered">AI-Powered</span><br>
+                    <span class="highlight">Emergency Medical Assistant</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Experience the future of emergency response with our <strong>Trauma Response Universal Safety Transcriber</strong>, <strong>T.R.U.S.T. Argus</strong> for short. T.R.U.S.T. Argus is the world's first point-of-injury detection app with medical-grade accuracy, designed for both you and our first responders worldwide.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('demo')">
+                        <i class="fas fa-play"></i>
+                        Try Live Demo
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('features')">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">85-92%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Injury Types</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label"> Dedicated<br>Languages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Offline Operation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="app-mockup">
+                    <img src="assets/darkMode3.png" alt="T.R.U.S.T. Argus App Mockup" class="mockup-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cutting-Edge Features</h2>
+                <p class="section-subtitle">Discover how T.R.U.S.T. Argus revolutionizes emergency medical response</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="assets/Scan_icon_imageset/Scan_icon_3x.png" alt="Scan Icon" width="52" height="52" class="custom-feature-icon">
+                    </div>
+                    <h3 class="feature-title">AI Injury Detection</h3>
+                    <p class="feature-description">
+                        Real-time injury classification with 85-92% accuracy using custom-trained machine learning models on 1,200+ medical images.
+                    </p>
+                    <ul class="feature-list">
+                        <li>15+ injury types detected</li>
+                        <li>Instant classification results</li>
+                        <li>Confidence scoring</li>
+                        <li>Offline operation</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="feature-title">Voice Commands</h3>
+                    <p class="feature-description">
+                        Hands-free operation with natural language processing in 9 languages for high-stress emergency situations.
+                    </p>
+                    <ul class="feature-list">
+                        <li>9 language support</li>
+                        <li>Natural language processing</li>
+                        <li>Noise-canceling technology</li>
+                        <li>Context-aware commands</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="feature-title">Medical Protocols</h3>
+                    <p class="feature-description">
+                        SALT triage system endorsed by American College of Emergency Physicians with step-by-step first aid guidance.
+                    </p>
+                    <ul class="feature-list">
+                        <li>SALT triage system</li>
+                        <li>Step-by-step guidance</li>
+                        <li>Professional protocols</li>
+                        <li>FHIR compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="assets/MCI_icon_imageset/MCI_icon_1x.png" alt="MCI Icon" width="52" height="52" class="custom-feature-icon">
+                    </div>
+                    <h3 class="feature-title">MCI Support</h3>
+                    <p class="feature-description">
+                        Mass Casualty Incident triage support with team coordination tools and comprehensive incident reporting.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Mass casualty triage</li>
+                        <li>Team coordination</li>
+                        <li>Incident reporting</li>
+                        <li>Resource management</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="assets/Profile_icon_imageset/Profile_icon_1x.png" alt="Profile Icon" class="custom-feature-icon">
+                    </div>
+                    <h3 class="feature-title">Profile Management</h3>
+                    <p class="feature-description">
+                        Comprehensive patient profile management with medical history tracking and secure data storage.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Patient profiles</li>
+                        <li>Medical history</li>
+                        <li>Secure storage</li>
+                        <li>Quick access</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Hospital Mapping</h3>
+                    <p class="feature-description">
+                        Real-time hospital locator with emergency services integration and optimal route planning.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Hospital locator</li>
+                        <li>Route optimization</li>
+                        <li>Emergency services</li>
+                        <li>Offline maps</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Privacy & Security</h3>
+                    <p class="feature-description">
+                        HIPAA compliant with military-grade encryption. All processing happens on-device for maximum privacy.
+                    </p>
+                    <ul class="feature-list">
+                        <li>HIPAA compliant</li>
+                        <li>Military-grade encryption</li>
+                        <li>On-device processing</li>
+                        <li>No data collection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience T.R.U.S.T. Argus</h2>
+                <p class="section-subtitle">Try our interactive demo to see how AI-powered injury detection works</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-sidebar">
+                                            <div class="demo-controls">
+                            <h3>Demo Controls</h3>
+                            
+                            <!-- AI Model Status -->
+                            <div class="ai-status" id="aiStatus">
+                                <div class="status-indicator loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Loading AI Model...
+                                </div>
+                                <div class="loading-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <small>This may take a few moments on first load</small>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group">
+                                <label>Upload Injury Image:</label>
+                                <input type="file" id="imageUpload" accept="image/*" class="file-input">
+                                <button class="btn btn-primary" id="analyzeBtn" onclick="analyzeImage()" disabled>
+                                    <i class="fas fa-search"></i>
+                                    Loading AI Model...
+                                </button>
+                            </div>
+                        <div class="control-group">
+                            <label>Try these sample injuries:</label>
+                            <div class="sample-images">
+                                <img src="assets/samples/sample1.jpg" alt="Sample 1 - Laceration" onclick="loadSampleImage('sample1.jpg')" class="sample-img" title="Laceration - Hand injury">
+                                <img src="assets/samples/sample2.jpg" alt="Sample 2 - Burn" onclick="loadSampleImage('sample2.jpg')" class="sample-img" title="Burn - Second degree forearm">
+                                <img src="assets/samples/sample5.jpg" alt="Sample 5 - Cut" onclick="loadSampleImage('sample5.jpg')" class="sample-img" title="Cut - Finger abrasion">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-info">
+                        <h3>How It Works</h3>
+                        <ol>
+                            <li>Upload an image or select a sample</li>
+                            <li>Our AI analyzes the image in real-time</li>
+                            <li>Get instant injury classification</li>
+                            <li>Receive medical guidance and protocols</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="demo-main">
+                    <div class="demo-display">
+                        <div id="imageDisplay" class="image-display">
+                            <div class="placeholder-content">
+                                <img src="assets/Scan_icon_imageset/Scan_icon_1x.png" alt="Scan Icon" class="placeholder-icon">
+                                <p>Upload an image to begin analysis</p>
+                            </div>
+                        </div>
+                        
+                        <div id="analysisResults" class="analysis-results hidden">
+                            <h3>T.R.U.S.T. Results</h3>
+                            <div class="result-item">
+                                <span class="result-label">Injury Type:</span>
+                                <span id="injuryType" class="result-value">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Confidence:</span>
+                                <span id="confidence" class="result-value">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Severity:</span>
+                                <span id="severity" class="result-value">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">ICD-10 Code:</span>
+                                <span id="icd10Code" class="result-value">-</span>
+                            </div>
+                            
+                            <div class="medical-guidance">
+                                <h4>Medical Guidance</h4>
+                                <div id="guidanceText" class="guidance-text">
+                                    Select an image to see medical guidance
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Advanced Technology Stack</h2>
+                <p class="section-subtitle">Built with cutting-edge AI and medical technology</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Core ML Models</h3>
+                    <p>Custom-trained machine learning models for injury classification with 1,200+ medical images</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>NLP Processing</h3>
+                    <p>Advanced natural language processing for voice commands in 9 languages</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision</h3>
+                    <p>State-of-the-art image recognition and injury assessment algorithms</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>FHIR Compliance</h3>
+                    <p>Healthcare data standards compliance for seamless hospital integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who Uses T.R.U.S.T. Argus?</h2>
+                <p class="section-subtitle">Trusted by emergency response professionals worldwide</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>First Responders & EMS</h3>
+                    <p>Reduce triage errors by up to 60% and improve response times by 25-35%</p>
+                    <ul>
+                        <li>Standardized protocols across teams</li>
+                        <li>Real-time injury assessment</li>
+                        <li>Enhanced decision support</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Healthcare Professionals</h3>
+                    <p>Quick injury assessment in emergency departments with seamless hospital system integration</p>
+                    <ul>
+                        <li>Professional-grade documentation</li>
+                        <li>FHIR-compliant data</li>
+                        <li>Team coordination tools</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Military & Tactical Teams</h3>
+                    <p>Offline operation in remote locations with secure communication protocols</p>
+                    <ul>
+                        <li>Mission-critical reliability</li>
+                        <li>Secure protocols</li>
+                        <li>Offline functionality</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Emergency Preparedness</h3>
+                    <p>Mass casualty incident support for organizations and emergency management teams</p>
+                    <ul>
+                        <li>MCI triage support</li>
+                        <li>Resource management</li>
+                        <li>Incident reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Ready to revolutionize emergency response? Contact us today.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@trust-argus.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>www.trust-argus.com</span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="organization" name="organization" placeholder="Organization">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/TRUSTArgus-logo-wht-text.png" alt="T.R.U.S.T. Argus Logo" class="footer-logo-img">
+                        <span>T.R.U.S.T. Argus</span>
+                    </div>
+                    <p>Revolutionizing emergency medical response through AI-powered solutions.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Live Demo</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#use-cases">Use Cases</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#hipaa">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 T.R.U.S.T. Argus LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js?v=1.1"></script>
+    <script src="scripts/demo.js?v=1.1"></script>
+    <script src="scripts/injury_classifier.js?v=1.1"></script>
+</body>
+</html>
